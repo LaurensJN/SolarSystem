@@ -6,10 +6,10 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SolarSystemSettings : MonoBehaviour
 {
-    [Range(0.0001f, 1)]
-    public double globalScale = 0.000001f;
+    [Range(0.00000000001f, 1)]
+    public double globalScale = 0.01f;
 
-    [Range(0.0001f, 1f)]
+    [Range(0.00000001f, 1f)]
     public double distanceScale;
 
     public bool sqrtDistance;
