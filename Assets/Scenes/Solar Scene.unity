@@ -163,6 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 686.67
+  AU: 15.273
+  eccentricity: 0.0485
 --- !u!1 &269723812
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 225
+  AU: 0.7233
+  eccentricity: 0.0167
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919569330}
+  - component: {fileID: 919569331}
   m_Layer: 0
   m_Name: Solar System
   m_TagString: Untagged
@@ -335,6 +342,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919569331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919569329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd7afda3d371c24580f736538eddbab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalScale: 0.16200000047683716
+  distanceScale: 1
+  sqrtDistance: 0
+  framesPerDay: 500
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 88
+  AU: 0.3871
+  eccentricity: 0.0068
 --- !u!1 &1510441693
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 30681
+  AU: 191.914
+  eccentricity: 0.0086
 --- !u!1 &1602084799
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 365.25
+  AU: 1
+  eccentricity: 0.0934
 --- !u!1 &1640708662
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 4331.865
+  AU: 52.028
+  eccentricity: 0.0556
 --- !u!1 &1648104016
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 60196.85
+  AU: 300.611
+  eccentricity: 0.25
 --- !u!1 &1828909531
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,3 +714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b5a2f0af172a4b9817a81693b3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunOrbit: 10756.61
+  AU: 95.388
+  eccentricity: 0.0472
