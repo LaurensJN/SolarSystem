@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Laurens</Author>
+  <LastAuthor>Laurens</LastAuthor>
+  <Created>2020-05-29T13:03:40Z</Created>
+  <LastSaved>2020-07-08T10:00:21Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12576</WindowHeight>
+  <WindowWidth>23256</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16" ss:Name="Normal 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Geneva" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s17">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s18" ss:Parent="s16">
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s19" ss:Parent="s16">
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s20">
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="11" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="134.4"/>
+   <Column ss:AutoFitWidth="0" ss:Width="60.6"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="168"/>
+   <Column ss:AutoFitWidth="0" ss:Width="63.599999999999994"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81.599999999999994"/>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Axial rotation days</Data></Cell>
+    <Cell><Data ss:Type="String">Diameter</Data></Cell>
+    <Cell><Data ss:Type="String">Distance (x1000)</Data></Cell>
+    <Cell><Data ss:Type="String">Rotation around sun days</Data></Cell>
+    <Cell><Data ss:Type="String">Tilt</Data></Cell>
+    <Cell><Data ss:Type="String">Distance</Data></Cell>
+    <Cell><Data ss:Type="String">Eccentricity</Data></Cell>
+    <Cell><Data ss:Type="String">AU</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Sun</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">1391900</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.20599999999999999</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Mercury</Data></Cell>
+    <Cell ss:Formula="= 58 + 15.5/24"><Data ss:Type="Number">58.645833333333336</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">4866</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">57000</Data></Cell>
+    <Cell><Data ss:Type="Number">88</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">57000000</Data></Cell>
+    <Cell><Data ss:Type="Number">6.7999999999999996E-3</Data></Cell>
+    <Cell><Data ss:Type="String">0.3871</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Venus</Data></Cell>
+    <Cell ss:Formula="= 243 + 26 / (24*60)"><Data ss:Type="Number">243.01805555555555</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">12106</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">108000</Data></Cell>
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell><Data ss:Type="Number">177.3</Data></Cell>
+    <Cell><Data ss:Type="Number">108000000</Data></Cell>
+    <Cell><Data ss:Type="Number">1.67E-2</Data></Cell>
+    <Cell><Data ss:Type="String">0.7233</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Earth</Data></Cell>
+    <Cell ss:Formula="= (23*60 + 56) / (24*60)"><Data ss:Type="Number">0.99722222222222223</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">12742</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">150000</Data></Cell>
+    <Cell><Data ss:Type="Number">365.25</Data></Cell>
+    <Cell><Data ss:Type="Number">23.4</Data></Cell>
+    <Cell><Data ss:Type="Number">150000000</Data></Cell>
+    <Cell><Data ss:Type="Number">9.3399999999999997E-2</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Mars</Data></Cell>
+    <Cell ss:Formula="= 1 + (36) / (24*60)"><Data ss:Type="Number">1.0249999999999999</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">6760</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">228000</Data></Cell>
+    <Cell ss:Formula="= 1.88 * R[-1]C"><Data ss:Type="Number">686.67</Data></Cell>
+    <Cell><Data ss:Type="Number">25.2</Data></Cell>
+    <Cell><Data ss:Type="Number">228000000</Data></Cell>
+    <Cell><Data ss:Type="Number">4.8500000000000001E-2</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">15273</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Jupiter</Data></Cell>
+    <Cell ss:Formula="= (9*60 + 55) / (24*60)"><Data ss:Type="Number">0.41319444444444442</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">139516</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">779000</Data></Cell>
+    <Cell ss:Formula="= 11.86 * R[-2]C"><Data ss:Type="Number">4331.8649999999998</Data></Cell>
+    <Cell><Data ss:Type="Number">3.1</Data></Cell>
+    <Cell><Data ss:Type="Number">779000000</Data></Cell>
+    <Cell><Data ss:Type="Number">5.5599999999999997E-2</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">52028</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Saturn</Data></Cell>
+    <Cell ss:Formula="= (10 *60 +40) / (24*60)"><Data ss:Type="Number">0.44444444444444442</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">116438</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">1430000</Data></Cell>
+    <Cell ss:Formula="= 29.45 * R[-3]C"><Data ss:Type="Number">10756.612499999999</Data></Cell>
+    <Cell><Data ss:Type="Number">26.7</Data></Cell>
+    <Cell><Data ss:Type="Number">1430000000</Data></Cell>
+    <Cell><Data ss:Type="Number">4.7199999999999999E-2</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">95388</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Uranus</Data></Cell>
+    <Cell ss:Formula="= (17 *60 +14)/(24*60)"><Data ss:Type="Number">0.71805555555555556</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">46940</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">2880000</Data></Cell>
+    <Cell ss:Formula="= 84* R[-4]C"><Data ss:Type="Number">30681</Data></Cell>
+    <Cell><Data ss:Type="Number">97.8</Data></Cell>
+    <Cell><Data ss:Type="Number">2880000000</Data></Cell>
+    <Cell><Data ss:Type="Number">8.6E-3</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">191914</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Neptune</Data></Cell>
+    <Cell ss:Formula="= 16/24"><Data ss:Type="Number">0.66666666666666663</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">45432</Data></Cell>
+    <Cell ss:Formula="= RC[3]/1000"><Data ss:Type="Number">4500000</Data></Cell>
+    <Cell ss:Formula="= 164.81 *R[-5]C"><Data ss:Type="Number">60196.852500000001</Data></Cell>
+    <Cell><Data ss:Type="Number">28.3</Data></Cell>
+    <Cell><Data ss:Type="Number">4500000000</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">300611</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:Index="3" ss:StyleID="s18"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+     <RangeSelection>R3C6:R10C6</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="9" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="105" ss:Span="1"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="66.600000000000009"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Planet</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Diameter</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Tilt</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Axial rotation</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Rotation around sun</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">AU</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Eccentricity</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Mercury</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">4866</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="= 58 + 15.5/24"><Data ss:Type="Number">58.645833333333336</Data></Cell>
+    <Cell><Data ss:Type="Number">88</Data></Cell>
+    <Cell><Data ss:Type="String">0.3871</Data></Cell>
+    <Cell><Data ss:Type="Number">6.7999999999999996E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Venus</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">12106</Data></Cell>
+    <Cell><Data ss:Type="Number">177.3</Data></Cell>
+    <Cell ss:Formula="= 243 + 26 / (24*60)"><Data ss:Type="Number">243.01805555555555</Data></Cell>
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell><Data ss:Type="String">0.7233</Data></Cell>
+    <Cell><Data ss:Type="Number">1.67E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Earth</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">12742</Data></Cell>
+    <Cell><Data ss:Type="Number">23.4</Data></Cell>
+    <Cell ss:Formula="= (23*60 + 56) / (24*60)"><Data ss:Type="Number">0.99722222222222223</Data></Cell>
+    <Cell><Data ss:Type="Number">365.25</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">9.3399999999999997E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Mars</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">6760</Data></Cell>
+    <Cell><Data ss:Type="Number">25.2</Data></Cell>
+    <Cell ss:Formula="= 1 + (36) / (24*60)"><Data ss:Type="Number">1.0249999999999999</Data></Cell>
+    <Cell ss:Formula="= 1.88 * R[-1]C"><Data ss:Type="Number">686.67</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">15273</Data></Cell>
+    <Cell><Data ss:Type="Number">4.8500000000000001E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Jupiter</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">139516</Data></Cell>
+    <Cell><Data ss:Type="Number">3.1</Data></Cell>
+    <Cell ss:Formula="= (9*60 + 55) / (24*60)"><Data ss:Type="Number">0.41319444444444442</Data></Cell>
+    <Cell ss:Formula="= 11.86 * R[-2]C"><Data ss:Type="Number">4331.8649999999998</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">52028</Data></Cell>
+    <Cell><Data ss:Type="Number">5.5599999999999997E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Saturn</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">116438</Data></Cell>
+    <Cell><Data ss:Type="Number">26.7</Data></Cell>
+    <Cell ss:Formula="= (10 *60 +40) / (24*60)"><Data ss:Type="Number">0.44444444444444442</Data></Cell>
+    <Cell ss:Formula="= 29.45 * R[-3]C"><Data ss:Type="Number">10756.612499999999</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">95388</Data></Cell>
+    <Cell><Data ss:Type="Number">4.7199999999999999E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Uranus</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">46940</Data></Cell>
+    <Cell><Data ss:Type="Number">97.8</Data></Cell>
+    <Cell ss:Formula="= (17 *60 +14)/(24*60)"><Data ss:Type="Number">0.71805555555555556</Data></Cell>
+    <Cell ss:Formula="= 84* R[-4]C"><Data ss:Type="Number">30681</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">191914</Data></Cell>
+    <Cell><Data ss:Type="Number">8.6E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Neptune</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">45432</Data></Cell>
+    <Cell><Data ss:Type="Number">28.3</Data></Cell>
+    <Cell ss:Formula="= 16/24"><Data ss:Type="Number">0.66666666666666663</Data></Cell>
+    <Cell ss:Formula="= 164.81 *R[-5]C"><Data ss:Type="Number">60196.852500000001</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">300611</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
