@@ -11,7 +11,7 @@ public class SolarSystemSettings : MonoBehaviour, INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 
     // [Range(0.00000000001f, 1)]
-    float planetScale = 100f;
+    float planetScale = 500f;
 
     // [Range(0.00000001f, 1f)]
     float distanceScale = 0.000001f;
@@ -19,7 +19,7 @@ public class SolarSystemSettings : MonoBehaviour, INotifyPropertyChanged
     bool sqrtDistance;
 
     // [Range(0.0001f, 500)]
-    float framesPerDay = 30f;
+    float framesPerDay = 10f;
 
     public float PlanetScale
     {
