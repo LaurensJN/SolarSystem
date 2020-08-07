@@ -11,10 +11,10 @@ public class SolarSystemSettings : MonoBehaviour, INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 
     // [Range(0.00000000001f, 1)]
-    float planetScale = 0.00001f;
+    float planetScale = 100f;
 
     // [Range(0.00000001f, 1f)]
-    float distanceScale = 0.001f;
+    float distanceScale = 0.000001f;
 
     bool sqrtDistance;
 
@@ -50,7 +50,7 @@ public class SolarSystemSettings : MonoBehaviour, INotifyPropertyChanged
 
     public void SpeedToFPS(float speed)
     {
-        FramesPerDay = 500 / speed;
+        FramesPerDay = 5000 / speed;
     }
     protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
