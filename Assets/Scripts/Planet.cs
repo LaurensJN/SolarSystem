@@ -79,12 +79,13 @@ public class Planet : MonoBehaviour
             case "PlanetScale":
                 float newPlanetScale = (sender as SolarSystemSettings).PlanetScale;
                 planetGO.transform.localScale *= newPlanetScale / planetScale;
-                Debug.Log(planetScale);
                 planetScale = newPlanetScale;
                 break;
             case "DistanceScale":
-                distanceScale = (sender as SolarSystemSettings).DistanceScale;
-                SetOrbitalProperties(distanceScale, framesPerDay, sunOrbit, AU, eccentricity);
+                float newDistanceScale = (sender as SolarSystemSettings).DistanceScale;
+                planetGO.transform.localScale *= newDistanceScale / distanceScale;
+                SetOrbitalProperties(newDistanceScale, framesPerDay, sunOrbit, AU, eccentricity);
+                distanceScale = newDistanceScale;
                 break;
             case "FramesPerDay":
                 float newFramesPerDay = (sender as SolarSystemSettings).FramesPerDay;
@@ -178,9 +179,8 @@ public class Planet : MonoBehaviour
         planet.transform.parent = parent;
         planet.name = $"{name}Planet";
         planet.transform.localScale *= diameter * distanceScale * planetScale;
-        Debug.Log(planetScale);
 
-        // Load texture with same name  
+        // Load texture with same name
         Texture2D texture = Resources.Load<Texture2D>($"Textures/{name}");
         Renderer renderer = planet.GetComponent<Renderer>();
         renderer.material.mainTexture = texture;
