@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    SolarSystemSettings globalProperties;
+    // GameObject of planet
+    GameObject planetGO;
 
+    // Parameters
+    public float diameter;              // Diameter of planet
+    public float tilt;                  // Rotation of planet axis
+    public float axialRotationDays;         // Days it takes to rotate around axis
     public float sunOrbit;              // Days it takes for one orbit around sun
     public float AU;                    // Relative distance semi-major axis compared to earth
     public float eccentricity;          // Eccentricity of rotation around the sun
 
     // Global properties
+    SolarSystemSettings globalProperties;
     float planetScale;
     float distanceScale;
     float framesPerDay;
@@ -24,6 +30,10 @@ public class Planet : MonoBehaviour
     float meanRadius;                   // Average radius of ellipse
     float phase;                        // Current position on ellipse (0-2 pi)
     float orbitalSpeedConstant;         // Constant transforming speed to phase change
+
+    // Derived properties axial rotation
+    // Set tilt and axial rotation of planet
+    Vector3 deltaAxialRotation;
 
 
     // Start is called before the first frame update
@@ -37,10 +47,12 @@ public class Planet : MonoBehaviour
         distanceScale = globalProperties.DistanceScale;
         framesPerDay = globalProperties.FramesPerDay;
 
+        // Set planet properties
+        planetGO = CreatePlanet(name, diameter, distanceScale, planetScale, transform);
+        SetAxialProperties(transform, tilt, axialRotationDays, framesPerDay);
+
         // Set orbital properties
         SetOrbitalProperties(distanceScale, framesPerDay, sunOrbit, AU, eccentricity);
-
-        // Set axial properties
     }
 
     // Update is called once per frame
@@ -48,16 +60,27 @@ public class Planet : MonoBehaviour
     {
         // Set new position of planet object around sun
         transform.position = CalculateNewPosition();
+
+        // Set planets axial rotation
+        planetGO.transform.Rotate(deltaAxialRotation, Space.Self);
     }
 
-
+    private void SetAxialProperties(Transform transform, float tilt, float axialRotationDays, float framesPerDay)
+    {
+        // Set tilt and axial rotation of planet
+        transform.rotation = Quaternion.Euler(0, 0, tilt);
+        deltaAxialRotation = new Vector3(0, (360 / (axialRotationDays * framesPerDay)), 0);
+    }
+    
     void OnGlobalPropertyChange(object sender, PropertyChangedEventArgs property)
     {
         switch (property.PropertyName)
         {
             case "PlanetScale":
-                // PlanetObject.transform.localScale *= (float)(globalProperties.globalScale / globalScale);
-                planetScale = (sender as SolarSystemSettings).PlanetScale;
+                float newPlanetScale = (sender as SolarSystemSettings).PlanetScale;
+                planetGO.transform.localScale *= newPlanetScale / planetScale;
+                Debug.Log(planetScale);
+                planetScale = newPlanetScale;
                 break;
             case "DistanceScale":
                 distanceScale = (sender as SolarSystemSettings).DistanceScale;
@@ -65,7 +88,7 @@ public class Planet : MonoBehaviour
                 break;
             case "FramesPerDay":
                 float newFramesPerDay = (sender as SolarSystemSettings).FramesPerDay;
-                // axialRotation *= framesPerDay / newFramesPerDay;
+                deltaAxialRotation *= framesPerDay / newFramesPerDay;
                 orbitalSpeedConstant *= framesPerDay / newFramesPerDay;
                 framesPerDay = newFramesPerDay;
                 break;
@@ -147,6 +170,21 @@ public class Planet : MonoBehaviour
 
         // Use mean velocity to calculte the velocity of phase change constant
         return ((1 / (sunOrbit * framesPerDay)) * 2 * Mathf.PI) / meanVelocity;
+    }
+
+    GameObject CreatePlanet(string name, float diameter, float distanceScale, float planetScale, Transform parent)
+    {
+        GameObject planet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        planet.transform.parent = parent;
+        planet.name = $"{name}Planet";
+        planet.transform.localScale *= diameter * distanceScale * planetScale;
+        Debug.Log(planetScale);
+
+        // Load texture with same name  
+        Texture2D texture = Resources.Load<Texture2D>($"Textures/{name}");
+        Renderer renderer = planet.GetComponent<Renderer>();
+        renderer.material.mainTexture = texture;
+        return planet;
     }
 
     Func<Vector3, double, double> SquaredRadius = (position, scale) => Math.Pow(position.magnitude, 2) / scale;
