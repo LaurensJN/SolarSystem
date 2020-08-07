@@ -19,7 +19,7 @@ public class SolarSystemSettings : MonoBehaviour, INotifyPropertyChanged
     bool sqrtDistance;
 
     // [Range(0.0001f, 500)]
-    float framesPerDay = 10f;
+    float framesPerDay = 100f;
 
     public float PlanetScale
     {
